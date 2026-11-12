@@ -1,3 +1,23 @@
-[11-11-2026 17:29:20] [INFO] Sistema iniciado correctamente
-[11-11-2026 17:29:20] [INFO] Cliente creado: Juan Pérez
-[11-11-2026 17:29:20] [INFO] Sistema finalizado
+[12-11-2026 11:15:09] [INFO] Inicio del sistema
+[12-11-2026 11:15:09] [INFO] === INICIO DEL SISTEMA ===
+[12-11-2026 11:15:09] [INFO] Simulación 1: Crear cliente válido
+[12-11-2026 11:15:09] [INFO] Cliente creado: María López
+[12-11-2026 11:15:09] [INFO] Simulación 2: Crear servicio válido
+[12-11-2026 11:15:09] [INFO] Servicio creado: Sala de Conferencias
+[12-11-2026 11:15:09] [INFO] Simulación 3: Crear reserva válida
+[12-11-2026 11:15:09] [INFO] Reserva creada: Reserva-RES-001
+[12-11-2026 11:15:09] [INFO] Simulación 4: Calcular costo con descuento
+[12-11-2026 11:15:09] [INFO] Costo calculado: $255000.00
+[12-11-2026 11:15:09] [INFO] Simulación 5: Calcular costo con impuesto
+[12-11-2026 11:15:09] [INFO] Costo con impuesto: $59500.00
+[12-11-2026 11:15:09] [INFO] Simulación 6: Cliente con correo inválido
+[12-11-2026 11:15:09] [ERROR] Validación: El formato del correo no es válido
+[12-11-2026 11:15:09] [INFO] Simulación 7: Descuento mayor a 100%
+[12-11-2026 11:15:09] [ERROR] Excepción capturada: El descuento debe estar entre 0 y 100
+[12-11-2026 11:15:09] [INFO] Simulación 8: Reserva con datos incompletos
+[12-11-2026 11:15:09] [ERROR] Excepción capturada: Faltan datos del cliente o del servicio
+[12-11-2026 11:15:09] [INFO] Simulación 9: Servicio no disponible
+[12-11-2026 11:15:09] [ERROR] Excepción capturada: El servicio seleccionado no está disponible
+[12-11-2026 11:15:09] [INFO] Simulación 10: Fecha de reserva incorrecta
+[12-11-2026 11:15:09] [ERROR] Excepción capturada: La fecha de la reserva debe ser posterior a hoy
+[12-11-2026 11:15:09] [INFO] === FIN DEL PROGRAMA ===
