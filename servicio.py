@@ -1,4 +1,5 @@
 from entidades_base import EntidadBase
+from excepciones import ErrorDescuentoInvalido
 
 class Servicio(EntidadBase):
     def __init__(self, nombre, descripcion, precio_base):
@@ -16,10 +17,8 @@ class Servicio(EntidadBase):
 
     def calcular_costo(self, descuento=0, impuestos=0):
         if descuento < 0 or descuento > 100:
-            raise ValueError("El descuento debe estar entre 0 y 100")
+            raise ErrorDescuentoInvalido()
         subtotal = self._precio_base * (1 - descuento / 100)
-        if impuestos < 0:
-            raise ValueError("Los impuestos no pueden ser negativos")
         total = subtotal * (1 + impuestos)
         return total
 
