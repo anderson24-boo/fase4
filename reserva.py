@@ -2,14 +2,19 @@ from entidades_base import EntidadBase
 from cliente import Cliente
 from servicio import Servicio
 from datetime import datetime
+from excepciones import ErrorReservaInvalida, ErrorFechaInvalida
 
 class Reserva(EntidadBase):
     def __init__(self, id, cliente, servicio, fecha, duracion_horas):
         super().__init__(id, f"Reserva-{id}")
+        
         if not isinstance(cliente, Cliente):
-            raise ValueError("El cliente no es válido")
+            raise ErrorReservaInvalida("El cliente no es válido")
         if not isinstance(servicio, Servicio):
-            raise ValueError("El servicio no es válido")
+            raise ErrorReservaInvalida("El servicio no es válido")
+        if fecha <= datetime.now():
+            raise ErrorFechaInvalida()
+            
         self._cliente = cliente
         self._servicio = servicio
         self._fecha = fecha
